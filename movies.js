@@ -7,9 +7,19 @@ const options = {
     },
 }
 let fetchResponse= fetch(url, options)
-        .then(response => response.json())
+    fetchResponse
+    .then(response => response.json())
+    .then(results => {
+        let html = ""
+        for (let result of results){
+            html = '<div class="card">' +
+                '<div class="card-header">' +
+                '<img src=""'
+        }return html
+    })
+console.log(fetchResponse)
 
-console.log(fetchResponse);
+
 
 
 // Loader for the page
