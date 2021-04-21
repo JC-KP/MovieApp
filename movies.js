@@ -6,19 +6,40 @@ const options = {
         'Content-Type': 'application/json'
     },
 }
-let fetchResponse= fetch(url, options)
-    fetchResponse
-    .then(response => response.json())
-    .then(results => {
-        let html = ""
-        for (let result of results){
-            html = '<div class="card">' +
-                '<div class="card-header">' +
-                '<img src=""'
-        }return html
-    })
-console.log(fetchResponse)
-console.log('kelvon can u see this')
+
+ fetch(url, options)
+     .then(response => response.json()
+        .then(results => {
+            $('.card-deck').html('')
+                renderMovies(results)
+
+        }))
+function renderMovies(results){
+console.log(results)
+
+for (let i= 0; i< results.length; i++) {
+    // if (result.title !== undefined && result.rating !== undefined) {
+    let html = ""
+    html = '<div class="card ">' +
+        '<div class="card-header m-0 p-0">' +
+        '<img class="w-100" src='+ results[i].poster +'>'+
+        '</div>' +
+        // '<div class ="card-body"'+
+        '<ul class=" list-group list-group-flush">' +
+        '<li class="list-group-item">'+ results[i].title + '</li>' +
+        '<li class="list-group-item">' + results[i].director + '</li>' +
+        '<li class="list-group-item">' + results[i].year + '</li>' +
+        '<li class="list-group-item">' + results[i].rating + '</li>' +
+        '<li class="list-group-item">' + results[i].plot + '</li>' +
+        '<li class="list-group-item">' + results[i].actors + '</li>' +
+        '</ul>' +
+        // '</div>'+
+        '</div>'
+    $('.card-deck').append(html)
+
+}}
+// }
+
 
 
 
