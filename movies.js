@@ -26,12 +26,12 @@ for (let i= 0; i< results.length; i++) {
         '</div>' +
         // '<div class ="card-body"'+
         '<ul class=" list-group list-group-flush">' +
-        '<li class="list-group-item">'+ results[i].title + '</li>' +
-        '<li class="list-group-item">' + results[i].director + '</li>' +
-        '<li class="list-group-item">' + results[i].year + '</li>' +
-        '<li class="list-group-item">' + results[i].rating + '</li>' +
-        '<li class="list-group-item">' + results[i].plot + '</li>' +
-        '<li class="list-group-item">' + results[i].actors + '</li>' +
+        '<li class="list-group-item">'+ 'Title: '+results[i].title + '</li>' +
+        '<li class="list-group-item">' + 'Director: '+results[i].director + '</li>' +
+        '<li class="list-group-item">' + 'Year: '+results[i].year + '</li>' +
+        '<li class="list-group-item">' + 'Rating: '+results[i].rating + '</li>' +
+        '<li class="list-group-item">' + 'Plot: '+results[i].plot + '</li>' +
+        '<li class="list-group-item">' + 'Cast: '+results[i].actors + '</li>' +
         '</ul>' +
         // '</div>'+
         '</div>'
