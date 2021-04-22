@@ -9,18 +9,61 @@
 </head>
 <body class="main">
 
-<form>
-    <label>New Movie
-        <input name="movie" type="text" id="movie-title" maxlength="100" required placeholder="Add Movie">
-    </label>
-    <!--    <button type="submit" id="submit-movie">Add Movie</button>-->
-</form>
-<form>
-    <label>Give a rating
-        <input name="movie" type="text" id="movie-rating" maxlength="100" required placeholder="Rate a movie">
-    </label>
-    <button type="submit" id="submit">Submit</button>
-</form>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Add Movie Here </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="movie-title" placeholder="Add Title" aria-label="Search">
+
+                </form>
+            </li>
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="movie-director" placeholder="Add director" aria-label="Search">
+
+                </form>
+            </li>
+            <li class="nav-item dropdown">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="movie-year" placeholder="Add Year" aria-label="Search">
+
+                </form>
+            </li>
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="movie-rating" placeholder="Add Rating" aria-label="Search">
+
+                </form>
+            </li>
+            <li>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="movie-cast" placeholder="Add Cast" aria-label="Search">
+                </form>
+                <button class="btn btn-outline-success my-2 my-sm-0" id="submit" type="submit">Search</button>
+            </li>
+        </ul>
+
+
+    </div>
+</nav>
+<!--<form>-->
+<!--    <label>New Movie-->
+<!--        <input name="movie" type="text" id="movie-title" maxlength="100" required placeholder="Add Movie">-->
+<!--    </label>-->
+<!--    &lt;!&ndash;    <button type="submit" id="submit-movie">Add Movie</button>&ndash;&gt;-->
+<!--</form>-->
+<!--<form>-->
+<!--    <label>Give a rating-->
+<!--        <input name="movie" type="text" id="movie-rating" maxlength="100" required placeholder="Rate a movie">-->
+<!--    </label>-->
+<!--    <button type="submit" id="submit">Submit</button>-->
+<!--</form>-->
     <div id="card-container" class="container mt-3">
         <div class="card-deck">
 
