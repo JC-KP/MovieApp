@@ -36,11 +36,14 @@ for (let i= 0; i< results.length; i++) {
             '<li class="list-group-item">' + 'Rating: ' + results[i].rating + '</li>' +
             '<li class="list-group-item">' + 'Cast: ' + results[i].actors + '</li>' +
             '</ul>' +
-            '</div>'
+            '</div>' +
+            '<button type="button" id="delete-btn" class="btn btn-danger">DELETE</button>'+
         $('.card-deck').append(html)
     }
 }}
-    // SUBMITTING USER MOVIE INTO INPUTS
+
+// SUBMITTING USER MOVIE INTO INPUTS
+
 $('#submit').click(function (e){
     e.preventDefault()
     let userMovie = {
@@ -53,6 +56,7 @@ $('#submit').click(function (e){
 
 
 //Post user movie
+
     fetch(url, {
         method: "POST",
         headers: {
@@ -68,3 +72,14 @@ $('#submit').click(function (e){
         })
 })
 
+//Delete movie
+
+// $('#delete-btn').click(function(e){
+//     e.preventDefault()
+//
+//     fetch(url, {
+//         method: "DELETE"
+//     }).then(function (response){
+//         location.reload()
+//     })
+// })
