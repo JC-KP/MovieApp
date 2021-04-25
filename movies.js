@@ -25,7 +25,7 @@ function renderMovies(results){
 for (let i= 0; i< results.length; i++) {
     if (results[i].title !== undefined && results[i].rating !== undefined) {
         let html = ""
-        html = '<div class="card ">' +
+        html = '<div class="card">' +
             '<div class="card-header m-0 p-0">' +
             '<img class="w-100" alt="movie poster" src=' + results[i].poster + '>' +
             '</div>' +
@@ -74,12 +74,12 @@ $('#submit').click(function (e){
 
 //Delete movie
 
-// $('#delete-btn').click(function(e){
-//     e.preventDefault()
-//
-//     fetch(url, {
-//         method: "DELETE"
-//     }).then(function (response){
-//         location.reload()
-//     })
-// })
+$('#delete-btn').click(function(e){
+    e.preventDefault()
+
+    fetch('https://endurable-mercurial-dosa.glitch.me/movies/' + this.results.id, {
+        method: "DELETE"
+    }).then(function (response){
+        location.reload()
+    })
+})
